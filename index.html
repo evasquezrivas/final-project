@@ -1,8 +1,293 @@
-<html lang="en-US">
-  <head>
-    <title>Untitled</title>
-  </head>
-  <body>
+<script src="https://cdn.jsdelivr.net/gh/netizenorg/netnet-standard-library@1.0.1/build/nn.min.js"></script>
+<style>
+
+  *  { box-sizing: border-box; }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 700vh;
+    margin: 0;
+    background: white;
+    font-family: Arial, sans-serif;
+  }
+
+  .frame {
+    position: relative;
+    display: flex;
+    width: 1160px;
+    height: 2500px;
+  }
+
+  .title {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 60px;
+  }
+  .line {
+    position: absolute;
+    left: 248px;
+    top: 120px;
+    width: 668px;
+    height: 2px;
+    background: black;
+  }
+  .black-left {
+    position: absolute;
+    left: 25px;
+    top: 294px;
+    width: 85px;
+    height: 125px;
+    background: black;
+  }
+  .gray-left {
+    position: absolute;
+    left: 110px;
+    top: 243px;
+    width: 284px;
+    height: 200px;
+    background: #767676;
+  }
+  .center-box {
+    position: absolute;
+    left: 394px;
+    top: 179px;
+    width: 375px;
+    height: 278px;
+    background: #c8d0da;
+  }
+  .gray-right {
+    position: absolute;
+    left: 769px;
+    top: 243px;
+    width: 293px;
+    height: 200px;
+    background: #767676;
+  }
+  .black-right {
+    position: absolute;
+    left: 1062px;
+    top: 294px;
+    width: 75px;
+    height: 125px;
+    background: black;
+  }
+  .next {
+    position: absolute;
+    left: 484px;
+    top: 485px;
+    width: 195px;
+    background: grey;
+    display: flex;
+    justify-content: center;
+    color: black;
+  }
+
+  .dates-title {
+    position: absolute;
+    top: 620px;
+    left: 0;
+    width: 550px;
+    text-align: center;
+    font-size: 24px;
+    border: double;
+  }
+  .dates {
+    position: absolute;
+    top: 700px;
+    left: 0;
+    width: 550px;
+    text-align: center;
+    font-size: 15px;
+  }
+  .calendar {
+    position: absolute;
+    left: 589px;
+    top: 600px;
+    width: 519px;
+    height: 452px;
+    background: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+  }
+
+  .movie-title {
+    position: absolute;
+    top: 1150px;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    border: double;
+  }
+  .poster-one, .poster-two, .poster-three {
+    position: absolute;
+    top: 1254px;
+    width: 221px;
+    height: 274px;
+    background: grey;
+  }
+  .poster-one {
+    left: 97px;
+  }
+  .poster-two {
+    left: 471px; 
+  }
+  .poster-three {
+    left: 857px; 
+  }
+
+  .caption-one, .caption-two, .caption-three {
+    position: absolute;
+    top: 1569px;
+    width: 209px;
+    height: 77px;
+    background: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+  }
+  .caption-one { 
+    left: 103px; 
+  }
+  .caption-two { 
+    left: 476px;
+  }
+  .caption-three {
+    left: 863px; 
+  }
+
+  .future-title {
+    position: absolute;
+    top: 1750px;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    border: double;
+  }
+  
+  .photo-one {
+    position: absolute;
+    top: 1854px;
+    width: 300px;
+    height: 250px;
+    background: grey;
+  }
+  .photo-two {
+    position: absolute;
+    top: 2154px;
+    width: 300px;
+    height: 250px;
+    background: grey;
+  }
+  .photo-three {
+    position: absolute;
+    top: 1954px;
+    left: 350px;
+    width: 250px;
+    height: 350px;
+    background: grey;
+  }
+  .photo-four {
+    position: absolute;
+    top: 2154px;
+    left: 650px;
+    width: 210px;
+    height: 250px;
+    background: grey;
+  }
+  .photo-five {
+    position: absolute;
+    top: 2154px;
+    left: 950px;
+    width: 210px;
+    height: 250px;
+    background: grey;
+  }
+  
+  .photo-six {
+    position: absolute;
+    top: 1854px;
+    left: 650px;
+    width: 510px;
+    height: 250px;
+    background: grey;
+  }
+  
+  .letter-title {
+    position: absolute;
+    top: 2550px;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    border: double;
+  }
+  
+  .envelope {
+    position: absolute;
+    top: 2760px;
+    left: 20px;
+    width: 550px;
+    height: 300px;
+    background: grey;
+  }
+  
+  .envelope:::after {
     
-  </body>
-</html>
+  }
+  
+  .letter {
+    position: absolute;
+    top: 2660px;
+    left: 610px;
+    width: 550px;
+    height: 550px;
+    background: grey;
+  }
+</style>
+
+<div class="frame">
+
+  <div class="title">Our Journal</div>
+  <div class="line"></div>
+  <div class="black-left"></div>
+  <div class="gray-left"></div>
+  <div class="center-box"></div>
+  <div class="gray-right"></div>
+  <div class="black-right"></div>
+  <a class="next" href="#">next</a>
+
+
+  <div class="dates-title">Important dates coming up</div>
+  <div class="dates">text box here</div>
+  <div class="calendar">calendar</div>
+  
+  <div class="movie-title">Movie Journal!</div>
+  <div class="poster-one"></div>
+  <div class="poster-two"></div>
+  <div class="poster-three"></div>
+  <div class="caption-one">text abt movie</div>
+  <div class="caption-two">text abt movie</div>
+  <div class="caption-three">text abt movie</div>
+  
+  <div class="future-title">The future!</div>
+  <div class="photo-one"></div>
+  <div class="photo-two"></div>
+  <div class="photo-three"></div>
+  <div class="photo-four"></div>
+  <div class="photo-five"></div>
+  <div class="photo-six"></div>
+  
+  <div class="letter-title">A letter to you</div>
+  <div class="envelope"></div>
+  <div class="letter"></div>
+  <div class="letter-text"></div>
+  
+
+</div>
