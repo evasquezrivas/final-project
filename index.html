@@ -9,8 +9,9 @@
     align-items: flex-start;
     min-height: 700vh;
     margin: 0;
-    background: white;
+    background: rgb(132, 71, 150);
     font-family: Arial, sans-serif;
+    color: white;
   }
 
   .frame {
@@ -34,7 +35,7 @@
     top: 120px;
     width: 668px;
     height: 2px;
-    background: black;
+    background: white;
   }
   .black-left {
     position: absolute;
@@ -235,11 +236,28 @@
     left: 20px;
     width: 550px;
     height: 300px;
-    background: grey;
+    background: white;
   }
   
-  .envelope:::after {
-    
+  .triangle {
+    position: absolute;
+    height: 150px;
+    aspect-ratio: 2;
+    clip-path: polygon(50% 100%,100% 0,0 0);
+    background: hsl(0, 0%, 96%);
+    top: 2760px;
+    left: 20px;
+    width: 550px;
+}
+  
+  .heart {
+    height: 100px; 
+    position: absolute;
+    aspect-ratio: 1;
+    clip-path: shape(from 50% 91%,line to 90% 50%,arc to 50% 9%  of 1%,arc to 10% 50% of 1%);
+    background: hsl(0, 100%, 36%);
+    top: 2850px;
+    left: 245px;
   }
   
   .letter {
@@ -248,7 +266,9 @@
     left: 610px;
     width: 550px;
     height: 550px;
-    background: grey;
+    background: white;
+    border: inset;
+    border-color: black;
   }
 </style>
 
@@ -288,6 +308,7 @@
   <div class="envelope"></div>
   <div class="letter"></div>
   <div class="letter-text"></div>
-  
+  <div class="triangle"></div>
+  <div class="heart"></div>
 
 </div>
